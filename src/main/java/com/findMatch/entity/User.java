@@ -7,6 +7,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 
 @Entity
@@ -27,8 +29,16 @@ public class User {
 	private String state;
 	private String password;
 	private  Long phoneno;
+	@Temporal(TemporalType.DATE)
 	private Date createdDate;
 	private Date profileCreatedBy;
+	private String profileType;
+	public String getProfileType() {
+		return profileType;
+	}
+	public void setProfileType(String profileType) {
+		this.profileType = profileType;
+	}
 	public Long getProfileId() {
 		return profileId;
 	}
