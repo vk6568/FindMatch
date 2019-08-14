@@ -1,21 +1,8 @@
-package com.findMatch.entity;
+package com.findMatch.dto;
 
 import java.util.Date;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-
-
-@Entity
-@Table
-public class User {
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+public class UserDto {
 	private Long profileId;
 	private String name;
 	private int age;
@@ -29,17 +16,8 @@ public class User {
 	private String state;
 	private String password;
 	private  Long phoneno;
-	@Temporal(TemporalType.DATE)
 	private Date createdDate;
-	private String religion;
-	public String getReligion() {
-		return religion;
-	}
-	public void setReligion(String religion) {
-		this.religion = religion;
-	}
 	private String profileCreatedBy;
-	
 	public Long getProfileId() {
 		return profileId;
 	}
@@ -132,5 +110,5 @@ public class User {
 	}
 	
 	
-
+	
 }
